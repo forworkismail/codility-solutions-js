@@ -57,11 +57,3 @@ function findCumulativeSum(arr) {
 
   return sum.result
 }
-
-
-/*----------------------------------------------------------------
-S = 'CAGCCTA'
-P = [2, 5, 0]
-Q = [4, 5, 6]
-*/
-
