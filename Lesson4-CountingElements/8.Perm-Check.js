@@ -1,19 +1,22 @@
 const permCheck = (A) => {
-  if (1 <= A.length <= 100000) {
-    let total = (A.length * (A.length + 1)) / 2;
-    let map = {};
-    let maximum = 0;
-    for (let i = 0; i < A.length; i++) {
-      if (!(A[i] in map)) {
-        map[A[i]] = A[i];
-        total -= A[i];
-      };
-      maximum = Math.max(maximum, A[i]);
+  let n = A.length;
+  if (1 <= n <= 100000) {
+  let total = (n * (n + 1)) / 2;
+  let map = {};
+  for (let i = 0; i < n; i++) {
+      
+    if (A[i] > n) {
+        return 0;
     }
 
-    if (total === 0 && Object.keys(map).length === maximum) return 1;
-    else return 0;
+    if (!(A[i] in map)) {
+      map[A[i]] = A[i];
+      total -= A[i];
+    };
   }
+
+  return total === 0 ? 1 : 0;
+}
   return 0;
 }
 
