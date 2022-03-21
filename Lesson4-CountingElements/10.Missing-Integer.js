@@ -8,7 +8,6 @@ const findSmallestPositiveInteger = (A) => {
         output++;
       }
     }
-    console.log(output)
     return output;
   }
   return 0;
